@@ -5,6 +5,16 @@ from forex_python.converter import CurrencyRates
 import numpy_financial as npf
 import requests
 
+import nltk as nltk
+nltk.download('vader_lexicon')
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+from nltk.stem import WordNetLemmatizer
+from collections import Counter
+from nltk import ngrams
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+
+
 #Vinay added for geo location calculation using post code. So before running the code pip install pgeocode in dev environment.
 import pgeocode
 import time
@@ -177,6 +187,7 @@ if st.sidebar.button("Determine Loan Amount"):
             st.dataframe(postcode_df.style.background_gradient(cmap=cm).set_precision(2))
         
         # Vinay's code ends here
+
 
     with tab3:
         st.header("Housing Market Sentiments")
