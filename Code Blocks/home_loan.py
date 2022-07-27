@@ -5,6 +5,11 @@ from forex_python.converter import CurrencyRates
 import numpy_financial as npf
 import requests
 
+
+from newsapi import NewsApiClient
+import requests
+import datetime
+from newsapi import NewsApiClient
 import nltk as nltk
 nltk.download('vader_lexicon')
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
@@ -13,7 +18,7 @@ from collections import Counter
 from nltk import ngrams
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
-
+import re
 
 #Vinay added for geo location calculation using post code. So before running the code pip install pgeocode in dev environment.
 import pgeocode
