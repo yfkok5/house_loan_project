@@ -2,7 +2,7 @@
 ## Summary 
 A dashboard which suggests a specific land price based on the postcode input.
 ## Goal 
-To assists housebuyers to make informed decisions blabla..
+To assists housebuyers to make informed decisions by gettung an indication of their borrowing capacity using the regular cash flow.
 ## Features
 1. FX rate (Currency input from users)
 2. Interest Rate & Cash Rate (RBA?)
