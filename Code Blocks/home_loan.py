@@ -30,10 +30,7 @@ import pydeck as pdk
 # This is for reading the CSV file that only has sold data plus append latitude and longitude data for each postcode, for dwelling calculation.   
 @st.cache(allow_output_mutation=True)
 def fetch_geo_data():
-    housesold_df = pd.read_csv("../Code Blocks/Datasets/MELBOURNE_HOUSE_PRICES_SOLD.csv")
-    nomi = pgeocode.Nominatim('au')
-    housesold_df[['latitude', 'longitude']] = housesold_df.apply(lambda row: nomi.query_postal_code(row['Postcode'])[['latitude', 'longitude']], axis=1, result_type='expand')
-    housesold_df = housesold_df.drop(columns= ['Unnamed: 0','Method','Date'])
+    housesold_df = pd.read_csv("house_dataset.csv")
     return housesold_df
 
 # Vinay added the code to include session state for loan_amount, to be used in tabs for dwellings calculation
