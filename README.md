@@ -1,4 +1,4 @@
-# House_Loan_Project
+# Property_Investment_Dashboard
 ## Summary 
 Know where to buy, knowing how much you can borrow.
 ## Goal 
