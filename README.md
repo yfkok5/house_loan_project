@@ -1,6 +1,6 @@
 # House_Loan_Project
 ## Summary 
-A dashboard which suggests a specific land price based on the postcode input.
+Know where to buy, knowing how much you can borrow.
 ## Goal 
 To assists housebuyers to make informed decisions by gettung an indication of their borrowing capacity using the regular cash flow.
 ## Features
