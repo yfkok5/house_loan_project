@@ -19,7 +19,10 @@ from nltk import ngrams
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import re
+<<<<<<< HEAD
 
+=======
+>>>>>>> da0cbb682e1bac4c7e1a931f7d94ac4a4191d2e8
 
 #Vinay added for geo location calculation using post code. So before running the code pip install pgeocode in dev environment.
 import pgeocode
