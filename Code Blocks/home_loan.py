@@ -19,10 +19,6 @@ from nltk import ngrams
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import re
-<<<<<<< HEAD
-
-=======
->>>>>>> da0cbb682e1bac4c7e1a931f7d94ac4a4191d2e8
 
 #Vinay added for geo location calculation using post code. So before running the code pip install pgeocode in dev environment.
 import pgeocode
@@ -200,10 +196,18 @@ if st.sidebar.button("Determine Loan Amount"):
 
     with tab3:
         st.header("Housing Market Sentiments")
-        news_from_date = "2022-06-27"
 
+        st.write("Input Date for News Data, note that we could only fetch 1 month worth of news :)")
+
+        #creates an input for user
+        news_from_date = st.date_input("Enter your date")
+
+        st.write('Sentiments/news from: ', news_from_date)
+
+        #converts datetime format to str
+        date_convert= news_from_date.strftime("%Y/%m/%d")
         api_key='8e935984687a40f79f1adf1d3ebfd548'
-        url = "https://newsapi.org/v2/everything?q=melbourne-house-prices&from="+news_from_date+"&apiKey="+api_key
+        url = "https://newsapi.org/v2/everything?q=melbourne-house-prices&from="+date_convert+"&apiKey="+api_key
         news = requests.get(url).json()
 
         news_article = list(range(0,10))
