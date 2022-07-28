@@ -55,6 +55,8 @@ st.markdown(
 
 st.sidebar.write("Savings Details")
 
+
+#Ryan's code starts here
 currency_dict = CurrencyRates()
 c = CurrencyRates()
 
@@ -64,6 +66,7 @@ savings = st.sidebar.number_input(
     step=100,
     value=500,
 )
+#Ryan's code ends here
 
 currency_option = st.sidebar.selectbox(
     'Which currency do you use?',
@@ -195,6 +198,7 @@ if st.sidebar.button("Determine Loan Amount"):
 
 
     with tab3:
+#Ryan's code starts here
         st.header("Housing Market Sentiments")
 
         st.write("Input Date for News Data, note that we could only fetch 1 month worth of news :)")
@@ -276,6 +280,7 @@ if st.sidebar.button("Determine Loan Amount"):
         plt.imshow(wc)
         plt.show()
         st.pyplot()
+#Ryan's code ends here
 
 # Vinay's code starts here for clearing the session state to enable fresh calculation    
 for key in st.session_state.keys():
